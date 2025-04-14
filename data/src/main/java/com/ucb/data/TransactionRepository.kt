@@ -5,7 +5,7 @@ import com.ucb.domain.Expense
 import com.ucb.domain.Income
 import com.ucb.domain.Transaction
 
-class TransactionRepository(private val localDataSource: ILocalDataSource) : ITransactionRepository {
+class TransactionRepository(private val localDataSource: ITransactionLocalDataSource) : ITransactionRepository {
     override fun registerExpense(expense: Expense) {
         localDataSource.saveExpense(expense)
     }
